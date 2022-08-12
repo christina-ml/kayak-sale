@@ -1,0 +1,32 @@
+.kayakCards {
+    color: green;
+
+    &__card {
+        border: 1px solid black;
+        margin: 5px;
+        padding: 10px;
+        display: inline-block;
+
+        &__banner {
+            background-color: black;
+            color: white;
+            text-transform: uppercase;
+            padding-right: 50px;
+            position: relative;
+              
+            &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-top: 80px solid #fff;
+            border-left: 80px solid transparent;
+            }
+        }
+
+
+        &__details {
+            color: red;
+        }
+    }
+}
