@@ -1,3 +1,7 @@
+// https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+// ^ For expanding underline on hover for Add to Cart button.
+
+
 .kayakCards {
     width: 900px;
     margin: 0 auto;
@@ -31,7 +35,7 @@
             }
 
             &__price {
-                text-align: center;
+                text-align: left;
             }
 
             &__availNearby {
@@ -40,6 +44,9 @@
                 // display: grid;
                 // grid-auto-flow: column;
                 font-weight: 400;
+                span {
+                    padding-right: 10px;
+                }
             }
         }
 
