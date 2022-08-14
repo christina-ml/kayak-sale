@@ -1,11 +1,47 @@
 .kayakCards {
+    width: 900px;
+    margin: 0 auto;
     color: green;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
     &__card {
         box-shadow: 3px 3px 10px 3px #d4d4d4;
         margin: 5px;
-        display: inline-block;
-        width: 250px;
+ 
+        &__details {
+            padding: 15px;
+            color: black;
+            font-weight: 600;
+            font-size: 18px;
+            
+            display: grid;
+            width: 250px;
+            height: 420px;
+
+            &__image {
+                img {
+                    height: auto;
+                    width: auto;
+                }
+            }
+
+            &__itemName {
+                text-align: left;
+            }
+
+            &__price {
+                text-align: center;
+            }
+
+            &__availNearby {
+                font-size: 12px;
+                display: inline-flexbox;
+                // display: grid;
+                // grid-auto-flow: column;
+                font-weight: 400;
+            }
+        }
 
         &__banner {
             background-color: black;
@@ -23,34 +59,12 @@
             border-left: 80px solid transparent;
             }
         }
-
-        &__details {
-            color: black;
-            font-weight: 600;
-            font-size: 14px;
-            padding: 15px;
-
-            &__itemName {
-                text-align: left;
-            }
-
-            &__price {
-                text-align: center;
-            }
-
-            &__availNearby {
-                font-size: 10px;
-                display: inline-block;
-                
-            }
-        }
     }
 
     .circleButton {
         display: inline-block;
         margin: 0 auto;
-        height: 20px;
-        width: 20px;
+        padding: 5px;
         
         &__outer {
             height: 20px;
@@ -73,12 +87,14 @@
     }
 
     &__cart {
-        border-top: 1px solid black;
+        border-top: 1px solid #000000;
         text-transform: uppercase;
+        padding: 15px 0px 15px 0px;
         a {
             text-decoration: none;
             color: black;
             font-weight: 600;
+            padding: 10px;
         }
     }
 }

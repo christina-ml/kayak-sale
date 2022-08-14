@@ -30,9 +30,12 @@ function KayakCard() {
                     {/* </div> */}
 
                     <div className="kayakCards__card__details">
-                        <div>{kayak.image === true && kayak.colors === 'green' ? <span><img src={greenkayak} alt="kayak" width="150" height="150" /></span> : ''}</div>
-                        <div>{kayak.image === true && kayak.colors === 'blue' ? <span><img src={bluekayak} alt="kayak" width="150" height="150" /></span> : ''}</div>
-
+                    <div className="kayakCards__card__details__image">
+                        <React.Fragment>
+                            {kayak.image === true && kayak.colors === 'green' ? <span><img src={greenkayak} alt="kayak" /></span> : ''}
+                            {kayak.image === true && kayak.colors === 'blue' ? <span><img src={bluekayak} alt="kayak" /></span> : ''}
+                        </React.Fragment>
+                    </div>
                         <div className="circleButton">
                             <div className="circleButton__outer"></div>
                             <div className="circleButton__inner"></div>
