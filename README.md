@@ -1,3 +1,8 @@
+## React Icons
+```
+npm install react-icons --save
+```
+
 ## Install React-Router-Dom
 ```
 npm install react-router-dom

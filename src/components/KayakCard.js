@@ -2,32 +2,59 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import kayakData from '../kayakData';
 
+import bluekayak from '../images/blue_kayak.jpeg'
+import greenkayak from '../images/green_kayak.jpeg'
+
+import { MdShoppingCart } from "react-icons/md";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { AiFillCloseCircle } from "react-icons/ai";
+
+
+
 import './KayakCard.scss';
 
 function KayakCard() {
+
+
+
   return (
     <div className="kayakCards">
         {kayakData.map((kayak) => {
             return (
                 <div className="kayakCards__card">
-                    <div className="kayakCards__card__banner">
+                    {/* <div className="kayakCards__card__banner"> */}
                         {/* {kayak} */}
-                        <span>D</span><span>Only at Dick's</span>
-                        <span>D</span><span>New</span>
-                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    </div>
-
+                        {/* <span>D</span><span>Only at Dick's</span> */}
+                        {/* <span>D</span><span>New</span> */}
+                        {/* <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> */}
+                    {/* </div> */}
 
                     <div className="kayakCards__card__details">
-                        <div>{kayak.image}</div>
-                        <div>{kayak.colors}</div>
-                        <div>{kayak.itemName}</div>
-                        <div>{kayak.price}</div>
-                        <div>{kayak.availability ? <span>yes</span> : <span>no</span>}</div>
-                        <div>{kayak.nearby ? <span>yes</span> : <span>no</span>}</div>
+                        <div>{kayak.image === true && kayak.colors === 'green' ? <span><img src={greenkayak} alt="kayak" width="150" height="150" /></span> : ''}</div>
+                        <div>{kayak.image === true && kayak.colors === 'blue' ? <span><img src={bluekayak} alt="kayak" width="150" height="150" /></span> : ''}</div>
+
+                        <div className="circleButton">
+                            <div className="circleButton__outer"></div>
+                            <div className="circleButton__inner"></div>
+                        </div>
+
+                        <div className="kayakCards__card__details__itemName">{kayak.itemName}</div>
+                        <div className="kayakCards__card__details__price">${kayak.price}</div>
+                        <div className="kayakCards__card__details__availNearby">
+                            <React.Fragment>
+                                {kayak.availability === 'yes' ? <span><AiFillCheckCircle color="green"/>Shipping Available</span>: <></>}
+                                {kayak.availability === 'no' ? <span><AiFillCloseCircle color="red"/>Not Available to Ship</span>: <></>}
+                                {kayak.availability === 'limited' ? <span><AiFillCheckCircle color="orange"/>Limited Stock to Ship</span>: <></>}
+                            </React.Fragment>
+                            <React.Fragment>
+                                {kayak.nearby === 'yes' ? <span><AiFillCheckCircle color="green" />Free Ship to Store</span>: <></>}
+                                {kayak.nearby === 'no' ?  <span><AiFillCloseCircle color="red"/>Not Available to Pickup</span>: <></>}
+                                {kayak.nearby === 'maybe' ? <span><AiFillCheckCircle color="orange" />In Nearby Stores</span>: <></>}
+                            </React.Fragment>
+                        </div>
                     </div>
-                    <div>
-                        <Link to="/cart">Add To Cart</Link>
+                    <div className="kayakCards__cart">
+                        <Link to="/cart"><MdShoppingCart color="sienna"/> Add To Cart</Link>
                     </div>
                 </div>
             )

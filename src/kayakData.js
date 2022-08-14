@@ -1,31 +1,31 @@
 const kayakData = [
     {
-        image: 'image',
-        colors: 'green, blue',
-        itemName: '/about',
+        image: true,
+        colors: 'green',
+        itemName: 'Sun Dolphin Aruba 10 Sit-In Kayak',
         price: 279.99,
-        availability: true,
-        nearby: true,
+        availability: 'no',
+        nearby: 'yes',
         onlyAtDicks: true,
-        newItem: false
+        newItem: false,
     },
     {
-        image: 'image',
-        colors: 'purple',
-        itemName: '/about',
+        image: true,
+        colors: 'blue',
+        itemName: 'Sun Dolphin Aruba 10 Sit-In Kayak',
         price: 249.99,
-        availability: true,
-        nearby: true,
+        availability: 'limited',
+        nearby: 'no',
         onlyAtDicks: false,
         newItem: true
     },
     {
-        image: 'image',
+        image: true,
         colors: 'blue',
-        itemName: '/about',
+        itemName: 'Sun Dolphin Aruba 10 Sit-In Kayak',
         price: 299.99,
-        availability: true,
-        nearby: true,
+        availability: 'yes',
+        nearby: "maybe",
         onlyAtDicks: true,
         newItem: false
     }
