@@ -1,8 +1,3 @@
-## gh-pages
-```
-$ npm install gh-pages --save-dev
-```
-
 ## React Icons
 ```
 npm install react-icons --save
