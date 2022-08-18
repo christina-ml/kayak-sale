@@ -9,8 +9,6 @@ import { MdShoppingCart } from "react-icons/md";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { AiFillCloseCircle } from "react-icons/ai";
 
-
-
 import './KayakCard.scss';
 
 function KayakCard() {
@@ -19,7 +17,7 @@ function KayakCard() {
 
   return (
     <div className="kayakCards">
-        {kayakData.map((kayak) => {
+        {kayakData.map((kayak, index) => {
             return (
                 <div className="kayakCards__card">
                     {/* <div className="kayakCards__card__banner"> */}
@@ -32,13 +30,13 @@ function KayakCard() {
                     <div className="kayakCards__card__details">
                     <div className="kayakCards__card__details__image">
                         <React.Fragment>
-                            {kayak.image === true && kayak.colors === 'green' ? <span><img src={greenkayak} alt="kayak" /></span> : ''}
-                            {kayak.image === true && kayak.colors === 'blue' ? <span><img src={bluekayak} alt="kayak" /></span> : ''}
+                            {kayak.image === true && kayak.colors === 'yellowgreen' ? <span><img src={greenkayak} alt="kayak" /></span> : ''}
+                            {kayak.image === true && kayak.colors === 'deepskyblue' ? <span><img src={bluekayak} alt="kayak" /></span> : ''}
                         </React.Fragment>
                     </div>
                         <div className="circleButton">
                             <div className="circleButton__outer"></div>
-                            <div className="circleButton__inner"></div>
+                            <div className="circleButton__inner" style={{backgroundColor: `${kayak.colors}`}}></div>
                         </div>
 
                         <div className="kayakCards__card__details__itemName">{kayak.itemName}</div>
